@@ -1,2 +1,6 @@
 *.py
 *.yml
+node_modules
+public
+dist
+pnpm-lock.yaml
