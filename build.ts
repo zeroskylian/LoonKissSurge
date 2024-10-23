@@ -1,7 +1,7 @@
 import path from 'node:path';
 import { promises as fs, Dirent } from 'node:fs'; // 使用 fs.promises 和 Dirent
 
-const REPO_URL = 'https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/';
+const REPO_URL = 'surge:///install-module?url=https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/';
 const ROOT_DIR = process.cwd(); // 根目录
 const OUTPUT_DIR = path.join(ROOT_DIR, 'public');
 
