@@ -1,21 +1,21 @@
-#!name = ï£¿ iRingo: âœˆ TestFlight
-#!desc = 1.è‡ªå®šä¹‰TestFlightç™»å½•å•†åº—åœ°åŒº\n2.å¤šè´¦æˆ·ä¿�å­˜å�Šåˆ‡æ�¢(éœ€é…�ç½®BoxJsä½¿ç”¨)\n3.è®©é€šç”¨åº”ç”¨åœ¨ä»»æ„�è‹¹æ�œå¤„ç�†å™¨è®¾å¤‡ä¸Šå�¯å®‰è£…
+#!name =  iRingo: ✈ TestFlight
+#!desc = 1.自定义TestFlight登录商店地区\n2.多账户保存及切换(需配置BoxJs使用)\n3.让通用应用在任意苹果处理器设备上可安装
 #!openUrl = http://boxjs.com/#/app/iRingo.TestFlight
 #!author = VirgilClyne[https://github.com/VirgilClyne]
 #!homepage = https://github.com/NSRingo/TestFlight/wiki
 #!icon = https://developer.apple.com/assets/elements/icons/testflight/testflight-128x128.png
-#!category = ï£¿ iRingo
+#!category =  iRingo
 #!date = 2024-10-13 07:35:04
 #!version = 3.2.4
 #!arguments = CountryCode:"US",MultiAccount:false,Universal:false
-#!arguments-desc = CountryCode: å›½å®¶æˆ–åœ°åŒºä»£ç �\n    â”œ AUTO: ğŸ‡ºğŸ‡³è‡ªåŠ¨ï¼ˆè·Ÿéš�åœ°åŒºæ£€æµ‹ç»“æ�œï¼‰\n    â”œ CN: ğŸ‡¨ğŸ‡³ä¸­å›½å¤§é™†\n    â”œ HK: ğŸ‡­ğŸ‡°é¦™æ¸¯\n    â”œ TW: ğŸ‡¹ğŸ‡¼å�°æ¹¾\n    â”œ SG: ğŸ‡¸ğŸ‡¬æ–°åŠ å�¡\n    â”œ US: ğŸ‡ºğŸ‡¸ç¾�å›½\n    â”œ JP: ğŸ‡¯ğŸ‡µæ—¥æœ¬\n    â”œ AU: ğŸ‡¦ğŸ‡ºæ¾³å¤§åˆ©äºš\n    â”œ GB: ğŸ‡¬ğŸ‡§è‹±å›½\n    â”œ KR: ğŸ‡°ğŸ‡·éŸ©å›½\n    â”œ CA: ğŸ‡¨ğŸ‡¦åŠ æ‹¿å¤§\n    â”” IE: ğŸ‡®ğŸ‡ªçˆ±å°”å…°\nä¸�å�Œå›½å®¶æˆ–åœ°åŒºæ��ä¾›çš„å†…å®¹æˆ–æœ‰å·®åˆ«ã€‚\n\nMultiAccount: å�¯ç”¨å¤šè´¦å�·æ”¯æŒ�\næ˜¯å�¦å�¯ç”¨å¤šè´¦å�·æ”¯æŒ�ï¼Œä¼šè‡ªåŠ¨ä¿�å­˜ä¿�å­˜æ›´æ–°å½“å‰�è´¦å�·ä¿¡æ�¯ã€‚\n\nUniversal: å�¯ç”¨é€šç”¨åº”ç”¨æ”¯æŒ�\næ˜¯å�¦å�¯ç”¨é€šç”¨åº”ç”¨æ”¯æŒ�ï¼Œè§£é™¤TFä¸­appçš„iOS/iPadOS/macOS(AppleSilicon)å¹³å�°é™�åˆ¶ã€‚\n
+#!arguments-desc = CountryCode: 国家或地区代码\n    ├ AUTO: 🇺🇳自动（跟随地区检测结果）\n    ├ CN: 🇨🇳中国大陆\n    ├ HK: 🇭🇰香港\n    ├ TW: 🇹🇼台湾\n    ├ SG: 🇸🇬新加坡\n    ├ US: 🇺🇸美国\n    ├ JP: 🇯🇵日本\n    ├ AU: 🇦🇺澳大利亚\n    ├ GB: 🇬🇧英国\n    ├ KR: 🇰🇷韩国\n    ├ CA: 🇨🇦加拿大\n    └ IE: 🇮🇪爱尔兰\n不同国家或地区提供的内容或有差别。\n\nMultiAccount: 启用多账号支持\n是否启用多账号支持，会自动保存保存更新当前账号信息。\n\nUniversal: 启用通用应用支持\n是否启用通用应用支持，解除TF中app的iOS/iPadOS/macOS(AppleSilicon)平台限制。\n
 
 [General]
 skip-proxy = %APPEND% iosapps.itunes.apple.com
 
 [Script]
-âœˆ TestFlight.request = type=http-request, pattern=^https?:\/\/testflight\.apple\.com\/, requires-body=1, script-path=https://github.com/NSRingo/TestFlight/releases/download/v3.2.4/request.js, argument=CountryCode={{{CountryCode}}}&MultiAccount={{{MultiAccount}}}&Universal={{{Universal}}}
-âœˆ TestFlight.response = type=http-response, pattern=^https?:\/\/testflight\.apple\.com\/, requires-body=1, script-path=https://github.com/NSRingo/TestFlight/releases/download/v3.2.4/response.js, argument=CountryCode={{{CountryCode}}}&MultiAccount={{{MultiAccount}}}&Universal={{{Universal}}}
+✈ TestFlight.request = type=http-request, pattern=^https?:\/\/testflight\.apple\.com\/, requires-body=1, script-path=https://github.com/NSRingo/TestFlight/releases/download/v3.2.4/request.js, argument=CountryCode={{{CountryCode}}}&MultiAccount={{{MultiAccount}}}&Universal={{{Universal}}}
+✈ TestFlight.response = type=http-response, pattern=^https?:\/\/testflight\.apple\.com\/, requires-body=1, script-path=https://github.com/NSRingo/TestFlight/releases/download/v3.2.4/response.js, argument=CountryCode={{{CountryCode}}}&MultiAccount={{{MultiAccount}}}&Universal={{{Universal}}}
 
 [MITM]
 hostname = %APPEND% testflight.apple.com
