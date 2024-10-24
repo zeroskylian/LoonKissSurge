@@ -108,24 +108,29 @@ function generateHtml(tree: string) {
               timeZone: "Asia/Shanghai",
             })}</p>
             <br>
-            <p>
+            <span>ℹ️ 一键导入操作说明</span>
+            <br>
+            <small>
                 <img
                     alt="导入 Surge(远程模块)"
                     title="导入 Surge(远程模块)"
                     style="height: 22px"
                     src="https://raw.githubusercontent.com/xream/scripts/refs/heads/main/scriptable/surge/surge-transparent.png"
                 />
-                一键导入 Surge(远程模块)
-            </p>
-            <p>
+                点击此图标, 可一键导入 Surge(远程模块)
+            </small>
+            <br>
+            <small>
                 <img
                 alt="导入 Surge(本地模块 需配合 Scriptable + Script Hub 的 Surge 模块工具)"
                 title="导入 Surge(本地模块 需配合 Scriptable + Script Hub 的 Surge 模块工具)"
                 style="height: 22px"
                 src="https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/refs/heads/main/assets/icon512x512.png"
                 />
-                一键导入 Surge(本地模块 需配合 <a href="https://apps.apple.com/app/scriptable/id1405459188">Scriptable</a> + <a href="https://github.com/Script-Hub-Org/Script-Hub/wiki/%E7%9B%B8%E5%85%B3%E7%94%9F%E6%80%81:-Surge-%E6%A8%A1%E5%9D%97%E5%B7%A5%E5%85%B7">Script Hub 的 Surge 模块工具</a>)
-            </p>
+                点击此图标, 可一键导入 Surge(本地模块 需配合 <a href="https://apps.apple.com/app/scriptable/id1405459188">Scriptable</a> + <a href="https://github.com/Script-Hub-Org/Script-Hub/wiki/%E7%9B%B8%E5%85%B3%E7%94%9F%E6%80%81:-Surge-%E6%A8%A1%E5%9D%97%E5%B7%A5%E5%85%B7">Script Hub 的 Surge 模块工具</a>)
+            </small>
+            <br>
+            <br>
             <ul class="directory-list">
                 ${tree}
             </ul>
