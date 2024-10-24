@@ -10,9 +10,12 @@
 	},
 	"devDependencies": {
 		"@types/node": "^22.7.9",
+		"pnpm": "^8.0.0",
 		"ts-node": "^10.9.2",
-		"typescript": "^5.6.3",
-		"pnpm": "^8.0.0"
+		"typescript": "^5.6.3"
 	},
-	"keywords": []
+	"keywords": [],
+	"dependencies": {
+		"build": "file:"
+	}
 }

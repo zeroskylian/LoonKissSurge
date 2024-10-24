@@ -7,7 +7,7 @@ const OUTPUT_DIR = path.join(ROOT_DIR, 'public');
 
 // 仅包括特定后缀类型的文件
 const allowedExtensions = ['.sgmodule', '.list', '.txt', '.js', '.json',".gitignore",".md"];
-const allowedDirectories = ['Surge'];
+const allowedDirectories = ['Surge','Official'];
 
 const prioritySorter = (a: Dirent, b: Dirent) => {
     if (a.isDirectory() && !b.isDirectory()) return -1;
@@ -61,8 +61,10 @@ function generateHtml(tree: string) {
             </p>
             <p>
             Thanks To <a href="https://github.com/iKeLee">iKeLee</a> For Her Great Work
+            <br>
+            Thanks to all Surge contributors
             </p>
-            <p>Last Build: ${new Date().toISOString()}</p>
+            <p>Last Build: ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}</p>
             <br>
             <ul class="directory-list">
                 ${tree}
