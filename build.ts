@@ -100,7 +100,7 @@ function generateHtml(tree: string) {
             Made by <a href="https://github.com/QingRex">Ling KeQing</a> | <a href="https://github.com/QingRex/LoonKissSurge/">Source @ GitHub</a>  | Fork <a href="https://github.com/SukkaW/Surge">Sukka</a> 
             </p>
             <p>
-            Thanks To <a href="https://github.com/iKeLee">iKeLee</a> For Her Great Work
+            Thanks To <a href="https://github.com/luestr">iKeLee</a> For Her Great Work
             <br>
             Thanks To All Surge Contributors
             </p>
