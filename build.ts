@@ -16,11 +16,15 @@ const allowedExtensions = [
   ".gitignore",
   ".md",
 ];
-const allowedDirectories = ["Surge", "Official","Beta-JQ"];
+const allowedDirectories = ["Official", "Surge", "Beta-JQ"];
 
 const prioritySorter = (a: Dirent, b: Dirent) => {
   if (a.isDirectory() && !b.isDirectory()) return -1;
   if (!a.isDirectory() && b.isDirectory()) return 1;
+  if (a.isDirectory() && b.isDirectory()) {
+    if (a.name === "Official") return -1;
+    if (b.name === "Official") return 1;
+  }
   return a.name.localeCompare(b.name);
 };
 
