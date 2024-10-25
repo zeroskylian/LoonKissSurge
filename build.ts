@@ -16,7 +16,7 @@ const allowedExtensions = [
   ".gitignore",
   ".md",
 ];
-const allowedDirectories = ["Official", "Surge", "Beta-JQ"];
+const allowedDirectories = ["Official", "Surge", "Beta"];
 
 const prioritySorter = (a: Dirent, b: Dirent) => {
   if (a.isDirectory() && !b.isDirectory()) return -1;
