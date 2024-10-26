@@ -36,7 +36,7 @@ async function walk(dir: string, baseUrl: string) {
 
   for (const entry of entries) {
     const fullPath = path.join(dir, entry.name);
-    const url = `${baseUrl}${entry.name}`;
+    const url = `${baseUrl}${encodeURIComponent(entry.name)}`;
 
     if (entry.isDirectory() && allowedDirectories.includes(entry.name)) {
       tree += `
