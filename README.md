@@ -1,5 +1,7 @@
 # LoonKissSurge 项目食用指南
 
+项目网站：https://surge.qingr.moe
+
 项目 Telegram 公告频道：https://t.me/LoonKissSurge
 
 ## 了解这个项目
