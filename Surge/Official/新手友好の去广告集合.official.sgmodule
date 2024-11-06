@@ -48,22 +48,6 @@ IP-CIDR,203.107.1.1/24,REJECT,no-resolve,pre-matching
 #>爱奇艺
 DOMAIN,api.iqiyi.com,REJECT,extended-matching,pre-matching
 
-#>Apple
-DOMAIN,advertising.apple.com,REJECT,extended-matching,pre-matching
-DOMAIN,api-adservices.apple.com,REJECT,extended-matching,pre-matching
-DOMAIN,apple.comscoreresearch.com,REJECT,extended-matching,pre-matching
-DOMAIN,banners.itunes.apple.com,REJECT,extended-matching,pre-matching
-DOMAIN,iad.apple.com,REJECT,extended-matching,pre-matching
-DOMAIN,iadcontent.apple.com,REJECT,extended-matching,pre-matching
-DOMAIN,iadctest.qwapi.com,REJECT,extended-matching,pre-matching
-DOMAIN,iadmoo.apple.com,REJECT,extended-matching,pre-matching
-DOMAIN,iadworkbench.apple.com,REJECT,extended-matching,pre-matching
-DOMAIN,launch.apple.com,REJECT,extended-matching,pre-matching
-DOMAIN,qwapi.apple.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,advp.apple.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,iad-apple.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,iadsdk.apple.com,REJECT,extended-matching,pre-matching
-
 #>安全浏览限制解除
 DOMAIN,lookup.api.bsb.baidu.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,u3.ucweb.com,REJECT,extended-matching,pre-matching
@@ -80,58 +64,10 @@ DOMAIN,afd.baidu.com,REJECT,extended-matching,pre-matching
 DOMAIN,afdconf.baidu.com,REJECT,extended-matching,pre-matching
 DOMAIN,lc.map.baidu.com,REJECT,extended-matching,pre-matching
 
-#>Clue 智库
-DOMAIN,api.helloclue.com,REJECT,extended-matching,pre-matching
-DOMAIN,brahe.apptimize.com,REJECT,extended-matching,pre-matching
-DOMAIN,collector.clue.run,REJECT,extended-matching,pre-matching
-DOMAIN,images.ctfassets.net,REJECT,extended-matching,pre-matching
-DOMAIN,mapi.apptimize.com,REJECT,extended-matching,pre-matching
-DOMAIN,md-i-s.apptimize.com,REJECT,extended-matching,pre-matching
-
 #>工商银行
 DOMAIN,pageviewp.icbc.com.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,mall.icbc.com.cn,REJECT,extended-matching,pre-matching
 
-#>广告联盟
-DOMAIN,ad.zijieapi.com,REJECT,extended-matching,pre-matching
-DOMAIN,adapi.izuiyou.com,REJECT,extended-matching,pre-matching
-DOMAIN,adtracker.adfunlink.com,REJECT,extended-matching,pre-matching
-DOMAIN,dig.bdurl.net,REJECT,extended-matching,pre-matching
-DOMAIN,dsp-x.jd.com,REJECT,extended-matching,pre-matching
-DOMAIN,et.tanx.com,REJECT,extended-matching,pre-matching
-DOMAIN,gdfp.gifshow.com,REJECT,extended-matching,pre-matching
-DOMAIN,init.supersonicads.com,REJECT,extended-matching,pre-matching
-DOMAIN,janapi.jd.com,REJECT,extended-matching,pre-matching
-DOMAIN,mercury-gateway.ixiaochuan.cn,REJECT,extended-matching,pre-matching
-DOMAIN,open.e.kuaishou.com,REJECT,extended-matching,pre-matching
-DOMAIN,open.kuaishou.com,REJECT,extended-matching,pre-matching
-DOMAIN,pagead2.googlesyndication-cn.com,REJECT,extended-matching,pre-matching
-DOMAIN,pagead2.googlesyndication.com,REJECT,extended-matching,pre-matching
-DOMAIN,sdk.e.qq.com,REJECT,extended-matching,pre-matching
-DOMAIN,tangram.e.qq.com,REJECT,extended-matching,pre-matching
-DOMAIN,ws.tapjoyads.com,REJECT,extended-matching,pre-matching
-DOMAIN,www.googleadservices.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,ads.linkedin.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,ads.vungle.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,adservice.google.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,adukwai.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,applovin.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,applvn.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,appsflyer.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,appsflyersdk.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,kuaishouzt.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,miaozhen.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,ubixioe.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,unityads.unity3d.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,v.smtcdns.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,zijieapi.com,REJECT,extended-matching,pre-matching # 会导致番茄页面打开缓慢
-DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT,extended-matching,pre-matching
-DOMAIN-KEYWORD,ads.g.doubleclick,REJECT,extended-matching,pre-matching
-DOMAIN-KEYWORD,asiad.byteactivity,REJECT,extended-matching,pre-matching
-DOMAIN-KEYWORD,pangolin-sdk-toutiao,REJECT,extended-matching,pre-matching
-DOMAIN-KEYWORD,pangolin.snssdk.com,REJECT,extended-matching,pre-matching
-DOMAIN-KEYWORD,pglstatp-toutiao,REJECT,extended-matching,pre-matching
-DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT,extended-matching,pre-matching
 
 #>海尔智家
 DOMAIN-SUFFIX,ehaier.com,REJECT,extended-matching,pre-matching
@@ -520,7 +456,7 @@ http-response-jq ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? 'delpa
 #>航旅纵横 //114.115.217.129, home.umetrip.com
 航旅纵横 = type=http-response, pattern=^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$, script-path=https://raw.githubusercontent.com/Ananaskop/Profile/main/Scripts/Umetrip.js, requires-body=true
 
-#>小红书 //edith.xiaohongshu.com, www.xiaohongshu.com
+#>小红书 //edith.xiaohongshu.com, www.xiaohongshu.com, rec.xiaohongshu.com
 小红书 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/note\/(?:imagefeed|live_photo\/save), script-path=https://raw.githubusercontent.com/Ananaskop/Profile/main/Scripts/xiaohongshu.js, requires-body=true
 小红书 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?, script-path=https://raw.githubusercontent.com/Ananaskop/Profile/main/Scripts/xiaohongshu.js, requires-body=true
 小红书 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config, script-path=https://raw.githubusercontent.com/Ananaskop/Profile/main/Scripts/xiaohongshu.js, requires-body=true
@@ -530,7 +466,7 @@ http-response-jq ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? 'delpa
 小红书 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\?, script-path=https://raw.githubusercontent.com/Ananaskop/Profile/main/Scripts/xiaohongshu.js, requires-body=true
 小红书 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v10\/search\/notes\?, script-path=https://raw.githubusercontent.com/Ananaskop/Profile/main/Scripts/xiaohongshu.js, requires-body=true
 小红书 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/note\/feed|v3\/note\/videofeed), script-path=https://raw.githubusercontent.com/Ananaskop/Profile/main/Scripts/xiaohongshu.js, requires-body=true
-小红书 = type=http-response, pattern=^https:\/\/(?:edith|www)\.xiaohongshu\.com\/api\/sns\/(?:v4\/note\/videofeed|v10\/note\/video\/save), script-path=https://raw.githubusercontent.com/Ananaskop/Profile/main/Scripts/xiaohongshu.js, requires-body=true
+小红书 = type=http-response, pattern=^https:\/\/(?:edith|rec|www)\.xiaohongshu\.com\/api\/sns\/(?:v4\/note\/videofeed|v10\/note\/video\/save), script-path=https://raw.githubusercontent.com/Ananaskop/Profile/main/Scripts/xiaohongshu.js, requires-body=true
 
 #>高德地图 //m5.amap.com, m5-zb.amap.com, oss.amap.com, sns.amap.com
 高德地图 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/aos\/perception\/publicTravel\/beforeNavi\?, script-path=https://raw.githubusercontent.com/Ananaskop/Profile/main/Scripts/amap.js, requires-body=true
@@ -594,4 +530,4 @@ Keep = type=http-response, pattern=^https:\/\/api\.gotokeep\.com\/config\/v3\/ba
 哔哩哔哩 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine\?|mine\/ipad\?), script-path=https://raw.githubusercontent.com/Ananaskop/Profile/main/Scripts/Bilibili_remove_ads.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% cn-acs.m.cainiao.com, guide-acs.m.taobao.com, ad.12306.cn, mobile.12306.cn, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, api.m.jd.com, gab.122.gov.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, *.hupu.com, api.pinduoduo.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, api.yangkeduo.com, 114.115.217.129, home.umetrip.com, edith.xiaohongshu.com, www.xiaohongshu.com, m5.amap.com, m5-zb.amap.com, oss.amap.com, sns.amap.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, 123.207.209.*, 112.53.55.225, 120.241.142.*, 120.241.143.*, 116.85.2.*, 116.85.3.*, 139.199.240.84, api.caiyunapp.com, *.cyapi.cn, mkt-gateway.tuhu.cn, cl-gateway.tuhu.cn, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.m.goofish.com, kad.gotokeep.com, 42.187.199.248, api.gotokeep.com, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net, www.bilibili.com, m.bilibili.com, live.bilibili.com
+hostname = %APPEND% cn-acs.m.cainiao.com, guide-acs.m.taobao.com, ad.12306.cn, mobile.12306.cn, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, api.m.jd.com, gab.122.gov.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, *.hupu.com, api.pinduoduo.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, api.yangkeduo.com, 114.115.217.129, home.umetrip.com, edith.xiaohongshu.com, www.xiaohongshu.com, rec.xiaohongshu.com, m5.amap.com, m5-zb.amap.com, oss.amap.com, sns.amap.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, 123.207.209.*, 112.53.55.225, 120.241.142.*, 120.241.143.*, 116.85.2.*, 116.85.3.*, 139.199.240.84, api.caiyunapp.com, *.cyapi.cn, mkt-gateway.tuhu.cn, cl-gateway.tuhu.cn, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.m.goofish.com, kad.gotokeep.com, 42.187.199.248, api.gotokeep.com, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net, www.bilibili.com, m.bilibili.com, live.bilibili.com
