@@ -12,4 +12,4 @@ hostname = %APPEND%, info.mina.xiaoaisound.com
 
 [Map Local]
 
-^https?:\/\/info\.mina\.xiaoaisound\.com\/(advertise|payGuide)\/ data-type=text data='{ "code": 0, "message": "Success", "data": [] }' header='Content-Type:application/json'
+^https?:\/\/info\.mina\.xiaoaisound\.com\/(advertise|payGuide)\/ data-type=text data='{"code":0,"message":"Success","data":[]}' header='Content-Type:application/json'
