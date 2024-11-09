@@ -12,35 +12,35 @@ AND,((OR,((PROTOCOL,QUIC), (PROTOCOL,UDP))), (DEST-PORT,443)),REJECT-NO-DROP
 
 #>菜鸟
 AND,((URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,extended-matching), (USER-AGENT,Cainiao4iPhone*)),REJECT
-DOMAIN,acs4baichuan.m.taobao.com,REJECT,extended-matching,pre-matching
-DOMAIN,adsmind.ugdtimg.com,REJECT,extended-matching,pre-matching
-DOMAIN,amdc.m.youku.com,REJECT,extended-matching,pre-matching
-DOMAIN,api.sm.cn,REJECT,extended-matching,pre-matching
-DOMAIN,apiv4-iyes.youku.com,REJECT,extended-matching,pre-matching
-DOMAIN,baichuan-sdk.alicdn.com,REJECT,extended-matching,pre-matching
-DOMAIN,cad.youku.com,REJECT,extended-matching,pre-matching
-DOMAIN,huichuan-mc.sm.cn,REJECT,extended-matching,pre-matching
-DOMAIN,huichuan.sm.cn,REJECT,extended-matching,pre-matching
-DOMAIN,iyes.youku.com,REJECT,extended-matching,pre-matching
-DOMAIN,m-vali.cp31.ott.cibntv.net,REJECT,extended-matching,pre-matching
-DOMAIN,mc.atm.youku.com,REJECT,extended-matching,pre-matching
-DOMAIN,nbsdk-baichuan.alicdn.com,REJECT,extended-matching,pre-matching
-DOMAIN,pre-acs.youku.com,REJECT,extended-matching,pre-matching
-DOMAIN,vali-g1.cp31.ott.cibntv.net,REJECT,extended-matching,pre-matching
-DOMAIN,vali-ugc.cp31.ott.cibntv.net,REJECT,extended-matching,pre-matching
-DOMAIN,yk-ssp.ad.youku.com,REJECT,extended-matching,pre-matching
-DOMAIN,ykad-data.youku.com,REJECT,extended-matching,pre-matching
-DOMAIN,youku-acs.m.taobao.com,REJECT,extended-matching,pre-matching
+DOMAIN,acs4baichuan.m.taobao.com,REJECT,extended-matching
+DOMAIN,adsmind.ugdtimg.com,REJECT,extended-matching
+DOMAIN,amdc.m.youku.com,REJECT,extended-matching
+DOMAIN,api.sm.cn,REJECT,extended-matching
+DOMAIN,apiv4-iyes.youku.com,REJECT,extended-matching
+DOMAIN,baichuan-sdk.alicdn.com,REJECT,extended-matching
+DOMAIN,cad.youku.com,REJECT,extended-matching
+DOMAIN,huichuan-mc.sm.cn,REJECT,extended-matching
+DOMAIN,huichuan.sm.cn,REJECT,extended-matching
+DOMAIN,iyes.youku.com,REJECT,extended-matching
+DOMAIN,m-vali.cp31.ott.cibntv.net,REJECT,extended-matching
+DOMAIN,mc.atm.youku.com,REJECT,extended-matching
+DOMAIN,nbsdk-baichuan.alicdn.com,REJECT,extended-matching
+DOMAIN,pre-acs.youku.com,REJECT,extended-matching
+DOMAIN,vali-g1.cp31.ott.cibntv.net,REJECT,extended-matching
+DOMAIN,vali-ugc.cp31.ott.cibntv.net,REJECT,extended-matching
+DOMAIN,yk-ssp.ad.youku.com,REJECT,extended-matching
+DOMAIN,ykad-data.youku.com,REJECT,extended-matching
+DOMAIN,youku-acs.m.taobao.com,REJECT,extended-matching
 
 #>12306
 DOMAIN,ad.12306.cn,DIRECT
 
 #>阿里巴巴
-DOMAIN,dns.alidns.com,REJECT,extended-matching,pre-matching
-DOMAIN,ems.youku.com,REJECT,extended-matching,pre-matching
-DOMAIN,hudong.alicdn.com,REJECT,extended-matching,pre-matching
-DOMAIN,ossgw.alicdn.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,ut.taobao.com,REJECT,extended-matching,pre-matching
+DOMAIN,dns.alidns.com,REJECT,extended-matching
+DOMAIN,ems.youku.com,REJECT,extended-matching
+DOMAIN,hudong.alicdn.com,REJECT,extended-matching
+DOMAIN,ossgw.alicdn.com,REJECT,extended-matching
+DOMAIN-SUFFIX,ut.taobao.com,REJECT,extended-matching
 
 #>阿里云盘
 IP-CIDR,203.107.1.1/24,REJECT,no-resolve,pre-matching
@@ -164,19 +164,18 @@ DOMAIN,yandexmetrica.com,REJECT,extended-matching,pre-matching
 #>拼多多
 AND,((URL-REGEX,^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/d,extended-matching), (USER-AGENT,*com.xunmeng.pinduoduo*)),REJECT
 AND,((URL-REGEX,^http:\/\/\[[0-9a-fA-F:]+\]/[a-zA-Z0-9]+(\?[a-zA-Z0-9=&]+),extended-matching), (USER-AGENT,*com.xunmeng.pinduoduo*)),REJECT
-DOMAIN,titan.pinduoduo.com,REJECT-NO-DROP,extended-matching,pre-matching
-# DOMAIN,m.pinduoduo.net,REJECT,extended-matching,pre-matching
-DOMAIN,ta-a.pinduoduo.com,REJECT,extended-matching,pre-matching
-DOMAIN,ta.pinduoduo.com,REJECT,extended-matching,pre-matching
-DOMAIN,th-a.pinduoduo.com,REJECT,extended-matching,pre-matching
-DOMAIN,th-b.pinduoduo.com,REJECT,extended-matching,pre-matching
-DOMAIN,th.pinduoduo.com,REJECT,extended-matching,pre-matching
+DOMAIN,titan.pinduoduo.com,REJECT,extended-matching
+DOMAIN,ta-a.pinduoduo.com,REJECT,extended-matching
+DOMAIN,ta.pinduoduo.com,REJECT,extended-matching
+DOMAIN,th-a.pinduoduo.com,REJECT,extended-matching
+DOMAIN,th-b.pinduoduo.com,REJECT,extended-matching
+DOMAIN,th.pinduoduo.com,REJECT,extended-matching
 
 #>航旅纵横
 URL-REGEX,^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native,REJECT,extended-matching
 
 #>小红书
-AND,((PROTOCOL,UDP), (DOMAIN-SUFFIX,xiaohongshu.com,extended-matching)),REJECT
+AND,((PROTOCOL,QUIC), (DOMAIN-SUFFIX,xiaohongshu.com,extended-matching)),REJECT
 
 #>高德地图
 AND,((URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,extended-matching), (USER-AGENT,AMapiPhone*)),REJECT
