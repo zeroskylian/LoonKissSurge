@@ -7,7 +7,7 @@
 force-http-engine-hosts = %APPEND% :8000
 
 [Rule]
-#>屏蔽QUIC
+# >屏蔽QUIC
 AND,((OR,((PROTOCOL,QUIC), (PROTOCOL,UDP))), (DEST-PORT,443)),REJECT-NO-DROP
 
 #>菜鸟
