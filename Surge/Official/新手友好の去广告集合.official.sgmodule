@@ -143,7 +143,7 @@ DOMAIN-SUFFIX,gdt.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,l.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN-KEYWORD,trace.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN-KEYWORD,trace.video.qq.com,REJECT,extended-matching,pre-matching
-IP-CIDR,47.110.187.87/32,REJECT,no-resolve=
+IP-CIDR,47.110.187.87/32,REJECT,no-resolve
 
 #>微信
 DOMAIN,badjs.weixinbridge.com,REJECT,extended-matching,pre-matching
