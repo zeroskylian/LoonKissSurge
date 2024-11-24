@@ -11,8 +11,7 @@ force-http-engine-hosts = %APPEND% :8000
 AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
 
 #>菜鸟
-AND,((URL-REGEX,^http:\/\/(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|\[[0-9a-fA-F:]+\])\/amdc\/mobileDispatch), (USER-AGENT,Cainiao4iPhone*)),REJECT
-AND,((URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,extended-matching), (USER-AGENT,Cainiao4iPhone*)),REJECT
+AND,((URL-REGEX,^http:\/\/(amdc\.m\.taobao\.com|((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|\[[0-9a-fA-F:]+\])\/amdc\/mobileDispatch), (USER-AGENT,Cainiao4iPhone*)),REJECT
 DOMAIN,acs4baichuan.m.taobao.com,REJECT,extended-matching,pre-matching
 DOMAIN,adsmind.ugdtimg.com,REJECT,extended-matching,pre-matching
 DOMAIN,amdc.m.youku.com,REJECT,extended-matching,pre-matching
@@ -60,11 +59,10 @@ DOMAIN,th.pinduoduo.com,REJECT,extended-matching
 URL-REGEX,^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native,REJECT,extended-matching
 
 #>小红书
-AND,((PROTOCOL,QUIC), (DOMAIN-SUFFIX,xiaohongshu.com,extended-matching)),REJECT
+AND,((PROTOCOL,UDP), (DOMAIN-SUFFIX,xiaohongshu.com,extended-matching)),REJECT
 
 #>高德地图
-AND,((URL-REGEX,^http:\/\/(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|\[[0-9a-fA-F:]+\])\/amdc\/mobileDispatch), (USER-AGENT,AMapiPhone*)),REJECT
-AND,((URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,extended-matching), (USER-AGENT,AMapiPhone*)),REJECT
+AND,((URL-REGEX,^http:\/\/(amdc\.m\.taobao\.com|((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|\[[0-9a-fA-F:]+\])\/amdc\/mobileDispatch), (USER-AGENT,AMapiPhone*)),REJECT
 DOMAIN,amap-aos-info-nogw.amap.com,REJECT,extended-matching,pre-matching
 DOMAIN,free-aos-cdn-image.amap.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,v.smtcdns.com,REJECT,extended-matching,pre-matching
@@ -80,8 +78,7 @@ DOMAIN,abyss.cyapi.cn,REJECT,extended-matching,pre-matching
 DOMAIN,ad.cyapi.cn,REJECT,extended-matching,pre-matching
 
 #>闲鱼
-AND,((URL-REGEX,^http:\/\/(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|\[[0-9a-fA-F:]+\])\/amdc\/mobileDispatch), (USER-AGENT,%E9%97%B2%E9%B1%BC*)),REJECT
-AND,((URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,extended-matching), (USER-AGENT,%E9%97%B2%E9%B1%BC*)),REJECT
+AND,((URL-REGEX,^http:\/\/(amdc\.m\.taobao\.com|((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|\[[0-9a-fA-F:]+\])\/amdc\/mobileDispatch), (USER-AGENT,%E9%97%B2%E9%B1%BC*)),REJECT
 
 #>Keep
 DOMAIN,hc-ssp.sm.cn,REJECT,extended-matching,pre-matching
