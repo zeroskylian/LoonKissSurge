@@ -7,11 +7,8 @@
 force-http-engine-hosts = %APPEND% :8000
 
 [Rule]
-#>禁用QUIC
-AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
-
 #>菜鸟
-AND,((URL-REGEX,^http:\/\/(amdc\.m\.taobao\.com|((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|\[[0-9a-fA-F:]+\])\/amdc\/mobileDispatch), (USER-AGENT,Cainiao4iPhone*)),REJECT
+AND,((URL-REGEX,^http:\/\/.+\/amdc\/mobileDispatch), (USER-AGENT,Cainiao4iPhone*)),REJECT
 DOMAIN,acs4baichuan.m.taobao.com,REJECT,extended-matching
 DOMAIN,adsmind.ugdtimg.com,REJECT,extended-matching
 DOMAIN,amdc.m.youku.com,REJECT,extended-matching
@@ -62,7 +59,7 @@ URL-REGEX,^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/n
 AND,((PROTOCOL,UDP), (DOMAIN-SUFFIX,xiaohongshu.com,extended-matching)),REJECT
 
 #>高德地图
-AND,((URL-REGEX,^http:\/\/(amdc\.m\.taobao\.com|((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|\[[0-9a-fA-F:]+\])\/amdc\/mobileDispatch), (USER-AGENT,AMapiPhone*)),REJECT
+AND,((URL-REGEX,^http:\/\/.+\/amdc\/mobileDispatch), (USER-AGENT,AMapiPhone*)),REJECT
 DOMAIN,amap-aos-info-nogw.amap.com,REJECT,extended-matching
 DOMAIN,free-aos-cdn-image.amap.com,REJECT,extended-matching
 DOMAIN-SUFFIX,v.smtcdns.com,REJECT,extended-matching
@@ -78,7 +75,7 @@ DOMAIN,abyss.cyapi.cn,REJECT,extended-matching
 DOMAIN,ad.cyapi.cn,REJECT,extended-matching
 
 #>闲鱼
-AND,((URL-REGEX,^http:\/\/(amdc\.m\.taobao\.com|((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|\[[0-9a-fA-F:]+\])\/amdc\/mobileDispatch), (USER-AGENT,%E9%97%B2%E9%B1%BC*)),REJECT
+AND,((URL-REGEX,^http:\/\/.+\/amdc\/mobileDispatch), (USER-AGENT,%E9%97%B2%E9%B1%BC*)),REJECT
 
 #>Keep
 DOMAIN,hc-ssp.sm.cn,REJECT,extended-matching
@@ -156,7 +153,7 @@ http-response-jq ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? 'delpa
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get data-type=text data="{}" status-code=200
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome data-type=text data="{}" status-code=200
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources data-type=text data="{}" status-code=200
-# ^https:\/\/heic\.alicdn\.com\/imgextra\/i\d\/\d*\/?[\w!]+-\d-(octopus|tps-1125-1602|tps-1080-1920)\.(jp|pn)g_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0 data-type=text data="{}" status-code=200
+^https:\/\/heic\.alicdn\.com\/imgextra\/i\d\/\d*\/?[\w!]+-\d-(octopus|tps-1125-1602|tps-1080-1920)\.(jp|pn)g_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0 data-type=text data="{}" status-code=200
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) data-type=text data="{}" status-code=200
 
 #>阿里云盘 //*api.alipan.com, member.alipan.com
@@ -369,4 +366,4 @@ Keep = type=http-response, pattern=^https:\/\/api\.gotokeep\.com\/config\/v3\/ba
 哔哩哔哩 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine\?|mine\/ipad\?), script-path=https://raw.ananaskop.com/Scripts/Bilibili.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% cn-acs.m.cainiao.com, acs.m.taobao.com, -heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, ad.12306.cn, mobile.12306.cn, *api.alipan.com, member.alipan.com, pan.baidu.com, image.mybank.icbc.com.cn, gab.122.gov.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com, home.mi.com, wallet.95516.com, *.hupu.com, api.pinduoduo.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, api.yangkeduo.com, 114.115.217.129, home.umetrip.com, edith.xiaohongshu.com, www.xiaohongshu.com, rec.xiaohongshu.com, m5.amap.com, m5-zb.amap.com, oss.amap.com, sns.amap.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, 123.207.209.*, 112.53.55.225, 120.241.142.*, 120.241.143.*, 116.85.2.*, 116.85.3.*, 139.199.240.84, api.caiyunapp.com, *.cyapi.cn, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.m.goofish.com, kad.gotokeep.com, 42.187.199.248, api.gotokeep.com, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net, www.bilibili.com, m.bilibili.com, live.bilibili.com
+hostname = %APPEND% cn-acs.m.cainiao.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, ad.12306.cn, mobile.12306.cn, *api.alipan.com, member.alipan.com, pan.baidu.com, image.mybank.icbc.com.cn, gab.122.gov.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com, home.mi.com, wallet.95516.com, *.hupu.com, api.pinduoduo.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, api.yangkeduo.com, 114.115.217.129, home.umetrip.com, edith.xiaohongshu.com, www.xiaohongshu.com, rec.xiaohongshu.com, m5.amap.com, m5-zb.amap.com, oss.amap.com, sns.amap.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, 123.207.209.*, 112.53.55.225, 120.241.142.*, 120.241.143.*, 116.85.2.*, 116.85.3.*, 139.199.240.84, api.caiyunapp.com, *.cyapi.cn, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.m.goofish.com, kad.gotokeep.com, 42.187.199.248, api.gotokeep.com, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net, www.bilibili.com, m.bilibili.com, live.bilibili.com
