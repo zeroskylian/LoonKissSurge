@@ -8,9 +8,9 @@ force-http-engine-hosts = %APPEND% :8000
 
 [Rule]
 #>微博
-DOMAIN,wbapp.uve.weibo.com,DIRECT,pro-matching,extended-matching
-DOMAIN-SUFFIX,biz.weibo.com,REJECT,pro-matching,extended-matching
-DOMAIN,dns.weibo.cn,REJECT,pro-matching,extended-matching
+DOMAIN,wbapp.uve.weibo.com,DIRECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,biz.weibo.com,REJECT,extended-matching,pre-matching
+DOMAIN,dns.weibo.cn,REJECT,extended-matching,pre-matching
 IP-CIDR,39.97.130.51/32,REJECT,no-resolve
 IP-CIDR,39.97.128.148/32,REJECT,no-resolve
 URL-REGEX,^http:\/\/api\.weibo\.cn\/2\/httpdns\/config,REJECT,extended-matching
@@ -18,36 +18,29 @@ URL-REGEX,^http:\/\/api\.weibo\.cn\/httpdns\/config,REJECT,extended-matching
 
 #>菜鸟
 AND,((URL-REGEX,^http:\/\/.+\/amdc\/mobileDispatch), (USER-AGENT,Cainiao4iPhone*)),REJECT
-DOMAIN,acs4baichuan.m.taobao.com,REJECT,pro-matching,extended-matching
-DOMAIN,adsmind.ugdtimg.com,REJECT,pro-matching,extended-matching
-DOMAIN,amdc.m.youku.com,REJECT,pro-matching,extended-matching
-DOMAIN,api.sm.cn,REJECT,pro-matching,extended-matching
-DOMAIN,apiv4-iyes.youku.com,REJECT,pro-matching,extended-matching
-DOMAIN,baichuan-sdk.alicdn.com,REJECT,pro-matching,extended-matching
-DOMAIN,cad.youku.com,REJECT,pro-matching,extended-matching
-DOMAIN,huichuan-mc.sm.cn,REJECT,pro-matching,extended-matching
-DOMAIN,huichuan.sm.cn,REJECT,pro-matching,extended-matching
-DOMAIN,iyes.youku.com,REJECT,pro-matching,extended-matching
-DOMAIN,m-vali.cp31.ott.cibntv.net,REJECT,pro-matching,extended-matching
-DOMAIN,mc.atm.youku.com,REJECT,pro-matching,extended-matching
-DOMAIN,nbsdk-baichuan.alicdn.com,REJECT,pro-matching,extended-matching
-DOMAIN,pre-acs.youku.com,REJECT,pro-matching,extended-matching
-DOMAIN,vali-g1.cp31.ott.cibntv.net,REJECT,pro-matching,extended-matching
-DOMAIN,vali-ugc.cp31.ott.cibntv.net,REJECT,pro-matching,extended-matching
-DOMAIN,yk-ssp.ad.youku.com,REJECT,pro-matching,extended-matching
-DOMAIN,ykad-data.youku.com,REJECT,pro-matching,extended-matching
-DOMAIN,youku-acs.m.taobao.com,REJECT,pro-matching,extended-matching
+DOMAIN,adsmind.ugdtimg.com,REJECT,extended-matching,pre-matching
+DOMAIN,amdc.m.youku.com,REJECT,extended-matching,pre-matching
+DOMAIN,apiv4-iyes.youku.com,REJECT,extended-matching,pre-matching
+DOMAIN,httpdns.alicdn.com,REJECT,extended-matching,pre-matching
+DOMAIN,huichuan-mc.sm.cn,REJECT,extended-matching,pre-matching
+DOMAIN,huichuan.sm.cn,REJECT,extended-matching,pre-matching
+DOMAIN,iyes.youku.com,REJECT,extended-matching,pre-matching
+DOMAIN,mc.atm.youku.com,REJECT,extended-matching,pre-matching
+DOMAIN,vali-g1.cp31.ott.cibntv.net,REJECT,extended-matching,pre-matching
+DOMAIN,vali-ugc.cp31.ott.cibntv.net,REJECT,extended-matching,pre-matching
+DOMAIN,yk-ssp.ad.youku.com,REJECT,extended-matching,pre-matching
+DOMAIN,ykad-data.youku.com,REJECT,extended-matching,pre-matching
 
 #>12306
 DOMAIN,ad.12306.cn,DIRECT
 
 #>淘宝
-DOMAIN,adashx.m.taobao.com,REJECT,pro-matching,extended-matching
-DOMAIN,ossgw.alicdn.com,REJECT,pro-matching,extended-matching
-DOMAIN,ems.youku.com,REJECT,pro-matching,extended-matching
-DOMAIN,hudong.alicdn.com,REJECT,pro-matching,extended-matching
-DOMAIN,h-adashx.ut.taobao.com,REJECT,pro-matching,extended-matching
-DOMAIN,ut.taobao.com,REJECT,pro-matching,extended-matching
+DOMAIN,adashx.m.taobao.com,REJECT,extended-matching,pre-matching
+DOMAIN,ossgw.alicdn.com,REJECT,extended-matching,pre-matching
+DOMAIN,ems.youku.com,REJECT,extended-matching,pre-matching
+DOMAIN,hudong.alicdn.com,REJECT,extended-matching,pre-matching
+DOMAIN,h-adashx.ut.taobao.com,REJECT,extended-matching,pre-matching
+DOMAIN,ut.taobao.com,REJECT,extended-matching,pre-matching
 
 #>阿里云盘
 IP-CIDR,203.107.1.1/24,REJECT,no-resolve
@@ -70,27 +63,27 @@ AND,((PROTOCOL,QUIC), (DOMAIN-SUFFIX,xiaohongshu.com,extended-matching)),REJECT
 
 #>高德地图
 AND,((URL-REGEX,^http:\/\/.+\/amdc\/mobileDispatch), (USER-AGENT,AMapiPhone*)),REJECT
-DOMAIN,amap-aos-info-nogw.amap.com,REJECT,pro-matching,extended-matching
-DOMAIN,free-aos-cdn-image.amap.com,REJECT,pro-matching,extended-matching
-DOMAIN-SUFFIX,v.smtcdns.com,REJECT,pro-matching,extended-matching
+DOMAIN,amap-aos-info-nogw.amap.com,REJECT,extended-matching,pre-matching
+DOMAIN,free-aos-cdn-image.amap.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,v.smtcdns.com,REJECT,extended-matching,pre-matching
 
 #>滴滴出行
-DOMAIN,hd.xiaojukeji.com,REJECT,pro-matching,extended-matching
-DOMAIN,gwp.xiaojukeji.com,REJECT,pro-matching,extended-matching
+DOMAIN,hd.xiaojukeji.com,REJECT,extended-matching,pre-matching
+DOMAIN,gwp.xiaojukeji.com,REJECT,extended-matching,pre-matching
 AND,((IP-ASN,45090,no-resolve), (DEST-PORT,25641), (PROTOCOL,TCP)),REJECT
 AND,((IP-ASN,63646,no-resolve), (DEST-PORT,25641), (PROTOCOL,TCP)),REJECT
 
 #>彩云天气
-DOMAIN,abyss.cyapi.cn,REJECT,pro-matching,extended-matching
-DOMAIN,ad.cyapi.cn,REJECT,pro-matching,extended-matching
+DOMAIN,abyss.cyapi.cn,REJECT,extended-matching,pre-matching
+DOMAIN,ad.cyapi.cn,REJECT,extended-matching,pre-matching
 
 #>闲鱼
 AND,((URL-REGEX,^http:\/\/.+\/amdc\/mobileDispatch), (USER-AGENT,%E9%97%B2%E9%B1%BC*)),REJECT
 
 #>Keep
-DOMAIN,hc-ssp.sm.cn,REJECT,pro-matching,extended-matching
-DOMAIN,httpdns.n.netease.com,REJECT,pro-matching,extended-matching
-DOMAIN,httpdns.calorietech.com,REJECT,pro-matching,extended-matching
+DOMAIN,hc-ssp.sm.cn,REJECT,extended-matching,pre-matching
+DOMAIN,httpdns.n.netease.com,REJECT,extended-matching,pre-matching
+DOMAIN,httpdns.calorietech.com,REJECT,extended-matching,pre-matching
 
 #>哔哩哔哩
 URL-REGEX,^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH,REJECT-TINYGIF,extended-matching
