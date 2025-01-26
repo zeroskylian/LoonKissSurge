@@ -32,7 +32,7 @@ DOMAIN,yk-ssp.ad.youku.com,REJECT,extended-matching,pre-matching
 DOMAIN,ykad-data.youku.com,REJECT,extended-matching,pre-matching
 
 #>12306
-DOMAIN,ad.12306.cn,DIRECT
+DOMAIN,ad.12306.cn,DIRECT,extended-matching
 
 #>淘宝
 DOMAIN,adashx.m.taobao.com,REJECT,extended-matching,pre-matching
