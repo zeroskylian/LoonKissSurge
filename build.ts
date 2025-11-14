@@ -165,6 +165,78 @@ function generateHtml(tree: string) {
             })}</p>
             <br>
 
+            <!-- 必需插件提示区域 -->
+            <div>
+                <p><strong>提示：</strong>请先安装以下两个基础插件，并在插件列表中保持它们优先生效（位于最下方）。</p>
+                <ul>
+                    <li>
+                        <a href="https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule" target="_blank">广告平台拦截器.beta.sgmodule
+                            <a
+                                style="border-bottom: none"
+                                href="surge:///install-module?url=${encodeURIComponent(
+                                    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule"
+                                )}"
+                                target="_blank"
+                            >
+                                <img
+                                alt="导入 Surge(远程模块)"
+                                title="导入 Surge(远程模块)"
+                                style="height: 22px"
+                                src="https://raw.githubusercontent.com/xream/scripts/refs/heads/main/scriptable/surge/surge-transparent.png"
+                                />
+                            </a>
+                            <a
+                                style="border-bottom: none"
+                                href="scriptable:///run/SurgeModuleTool?url=${encodeURIComponent(
+                                    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule"
+                                )}"
+                                target="_blank"
+                            >
+                                <img
+                                alt="导入 Surge(本地模块 需配合 Scriptable + Script Hub 的 Surge 模块工具)"
+                                title="导入 Surge(本地模块 需配合 Scriptable + Script Hub 的 Surge 模块工具)"
+                                style="height: 22px"
+                                src="https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/refs/heads/main/assets/icon512x512.png"
+                                />
+                            </a>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/HTTPDNS%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule" target="_blank">HTTPDNS拦截器.beta.sgmodule
+                            <a
+                                style="border-bottom: none"
+                                href="surge:///install-module?url=${encodeURIComponent(
+                                    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/HTTPDNS%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule"
+                                )}"
+                                target="_blank"
+                            >
+                                <img
+                                alt="导入 Surge(远程模块)"
+                                title="导入 Surge(远程模块)"
+                                style="height: 22px"
+                                src="https://raw.githubusercontent.com/xream/scripts/refs/heads/main/scriptable/surge/surge-transparent.png"
+                                />
+                            </a>
+                            <a
+                                style="border-bottom: none"
+                                href="scriptable:///run/SurgeModuleTool?url=${encodeURIComponent(
+                                    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/HTTPDNS%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule"
+                                )}"
+                                target="_blank"
+                            >
+                                <img
+                                alt="导入 Surge(本地模块 需配合 Scriptable + Script Hub 的 Surge 模块工具)"
+                                title="导入 Surge(本地模块 需配合 Scriptable + Script Hub 的 Surge 模块工具)"
+                                style="height: 22px"
+                                src="https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/refs/heads/main/assets/icon512x512.png"
+                                />
+                            </a>
+                        </a>
+                    </li>
+                </ul>
+                <p>这两项是所有去广告方案的前置依赖，缺少时其他模块可能无法生效。</p>
+            </div>
+
             <!-- 搜索和提示区域 -->
             <div class="search-section">
                 <input type="text" id="search" placeholder="🔍 搜索文件和文件夹..."/>
